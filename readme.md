@@ -1,5 +1,5 @@
 <!--
-Market: SF
+Market: DEN
 -->
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
@@ -56,7 +56,7 @@ Today, the command line still exists, even though you may have never seen it as 
 ---
 ## Forget Finder, get fast at using your laptop
 
-### Opening & Closing Terminal
+### Opening & Closing Terminal (3 minutes)
 
 First, we need to launch the command prompt. We do this by using spotlight:
 
@@ -82,7 +82,19 @@ Notice that you can actually hit enter as soon as the field autocompletes. Get u
 
 ---
 
-## Paths - Catch Up
+## Paths - Ping-Pong Lab
+
+Here's a quick review lab:
+From your home directory, make a 
+* a file named my ``my_birthday_<you birthday in yy_mm_dd format>.txt``, example ``my_birthday_79_05_11.txt``.
+* a directory named ``temporary_work``
+* a file named ``i_love_javascript.js`` in the ``temporary_work`` directory
+* make a directory named ``wdi`` and another directory in ``wdi`` named ``lessons``
+* print out the contents of the ``temporary_work`` folder 
+
+You'll have 3 minutes for this excercise.
+
+### Paths
 
 Every file or folder in a file system can be read, written, and deleted by referencing its position inside the filesystem. When we talk about the position of a file or a folder in a file system, we refer to its "path". There are a couple of different kinds of paths we can use to refer to a file – **absolute paths** and **relative paths**.
 
@@ -92,21 +104,9 @@ _Strictly speaking, there is a difference between a directory which is a file sy
 
 *Taken from [Close-To-Open Cache Consistency in the Linux NFS Client](http://www.citi.umich.edu/projects/nfs-perf/results/cel/dnlc.html)*
 
-### What is an absolute path?
+*Absolute Paths*
 
 An absolute path is defined as the specific location of a file or folder from the root directory, typically shown as `/`. The root directory is the starting point from which all other folders are defined and is not normally the same as your **Home** directory, which is normally found at `/Users/[Your Username]`.
-
-### Working with unix commands and file paths
-
-Typing `cd` - a command for "change directory" with no parameters takes us to our home directory.
-
-```bash
-cd
-```
-
-If we type in `pwd` - a command for "print working directory" from that folder, we can see where we are in relation to the root directory.
-
-Some examples of absolute path:
 
 ```bash
 /usr/local/bin/git
@@ -114,10 +114,11 @@ Some examples of absolute path:
 /var/data/database.db
 
 ```
-
 Notice, all these paths started from `/` directory which is a root directory for every Linux/Unix machines.
 
-### What is a relative path?
+Some examples of absolute path:
+
+*What is a relative path?*
 A relative path is a reference to a file or folder **relative** to the current position, or the present working directory(pwd). If we are in the folder `/a/b/` and we want to open the file that has the absolute path `/a/b/c/file.txt`, we can just type:
 
 ```bash
@@ -133,7 +134,6 @@ open ./c/file.txt
 At any time, we can also use the absolute path, by adding a slash to the beginning of the path. The absolute path is the same for a file or a folder regardless of the current working directory, but relative paths are different, depending on what directory we are in.  Directory structures are laid out like `directory/subdirectory/subsubdirectory`.
 
 Below are some examples of using relative and absolute path for the same action:
-
 
 - My present location is `/wdi/lessons` and now I want to change directory to `/wdi`.
 
@@ -163,34 +163,9 @@ We're "looking into" the User directory at this point; use **Tab** and the **arr
 
 Pressing **Up** scrolls through previously entered commands.
 
-What if you're wondering what's in a directory?</summary>
-Typing `ls` and hitting enter is like asking the computer the question "what stuff is in this directory?"  Try it in your current directory and share what you see!
+[Comment] <> (CFU. Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
 
-
-## Look around your OS - Independent Practice
-
-Practice the unix commands we just learned with the bullets below:
-
-- Use the `cd` command to go to your home folder.
-- Use the `ls` command see what is in your home directory.
-- Use the `cd [directory]` command to go into any folder that you spot.
-- In the above command, replace `[directory]` with the directory name you intend to move to.
-- Use the `ls` command to see what files and directories exist there.
-- Use the `cd` command to go to your home folder.
-
-## Creating, copying, and removing files and folders
-
-What if we want to create files and folders?  The command `mkdir directory-name` creates a new directory with the name “directory-name”.
-
-Try it out. From your current directory, `ls` to look around and then `mkdir my-project` to create a new directory with the name “my-project”.  This new directory will be created within the current parent directory. `ls` again to see it's there.
-
-From the same directory, to create a file, `touch file-name` creates a new file with the name “file-name”.  Try it out - `touch my-file` creates a new file with the name “my-file”.  Again, this new file will be created within the current parent directory.  You can also use different file paths to create files within directories:
-
-```bash
-touch my-project/this-new-file.txt
-```
-
-Then if you `ls my-project` you'll notice the `this-new-file.txt` is within.
+### Copying and Moving Files () 
 
 Copying files and folders? No problem - `cp file new-file1` creates a copy of the “file” and calls it “new-file” in your current directory.  If you're looking to copy directories you'll have to pass in a `-r`, which stands for "recursive" - to copy the directory and everything inside of it:
 
@@ -342,6 +317,8 @@ This breaks down like this:
 - the second group of three letters corresponds to the owner group permission,
 - the last group of three letters corresponds to others permission,
 
+[CFU] <> (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
+
 #### `chmod`
 
 To modify a file's permissions you need to use the `chmod` command.
@@ -388,6 +365,7 @@ Which makes : 755
 
 So, 755 in UNIX permissions means 'I don't mind if other people read or run this file, but only I should be able to modify it' while 777 means 'everyone has full access to this file'
 
+[Comment] <> (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
 
 ## Customize The terminal - Demo
 
