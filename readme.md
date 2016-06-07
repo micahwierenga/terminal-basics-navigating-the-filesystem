@@ -163,7 +163,7 @@ We're "looking into" the User directory at this point; use **Tab** and the **arr
 
 Pressing **Up** scrolls through previously entered commands.
 
-[CFU]: (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
+[CFU]: # (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
 
 ## Copying and Moving Files (10 mins)
 
@@ -317,7 +317,7 @@ This breaks down like this:
 - the second group of three letters corresponds to the owner group permission,
 - the last group of three letters corresponds to others permission,
 
-[CFU]: (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
+[CFU]: # (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
 
 #### `chmod`
 
@@ -365,7 +365,7 @@ Which makes : 755
 
 So, 755 in UNIX permissions means 'I don't mind if other people read or run this file, but only I should be able to modify it' while 777 means 'everyone has full access to this file'
 
-[Comment] <> (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
+[Comment]: # (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
 
 ## Customize The terminal - Demo (15 mins)
 
@@ -461,7 +461,7 @@ The orders of the folders in the path matters. For example, in the path above, i
 
 Get comfortable with your `~/.bash_profile`
 
-[Comment]: (export works for anything. We can use it to keep track of other variables we might need like whether something is a dev or production environment.) 
+[Comment]: # (export works for anything. We can use it to keep track of other variables we might need like whether something is a dev or production environment.) 
 
 ## Closing Thoughts
 
