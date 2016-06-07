@@ -54,9 +54,9 @@ Today, the command line still exists, even though you may have never seen it as 
 </details>
 
 ---
-## Forget Finder, get fast at using your laptop
+## Forget Finder, get fast at using your laptop (5 minutes)
 
-### Opening & Closing Terminal (3 minutes)
+### Opening & Closing Terminal 
 
 First, we need to launch the command prompt. We do this by using spotlight:
 
@@ -82,7 +82,7 @@ Notice that you can actually hit enter as soon as the field autocompletes. Get u
 
 ---
 
-## Paths - Ping-Pong Lab
+## Paths (10 mins) 
 
 Here's a quick review lab:
 From your home directory, make a 
@@ -94,7 +94,7 @@ From your home directory, make a
 
 You'll have 3 minutes for this excercise.
 
-### Paths
+### Paths 
 
 Every file or folder in a file system can be read, written, and deleted by referencing its position inside the filesystem. When we talk about the position of a file or a folder in a file system, we refer to its "path". There are a couple of different kinds of paths we can use to refer to a file – **absolute paths** and **relative paths**.
 
@@ -163,9 +163,9 @@ We're "looking into" the User directory at this point; use **Tab** and the **arr
 
 Pressing **Up** scrolls through previously entered commands.
 
-[Comment] <> (CFU. Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
+[CFU]: (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
 
-### Copying and Moving Files () 
+## Copying and Moving Files (10 mins)
 
 Copying files and folders? No problem - `cp file new-file1` creates a copy of the “file” and calls it “new-file” in your current directory.  If you're looking to copy directories you'll have to pass in a `-r`, which stands for "recursive" - to copy the directory and everything inside of it:
 
@@ -246,7 +246,7 @@ A few other helpful commands you can try on your own:
 | `df -h`   | displays free disk space                                              |
 
 
-## UNIX permissions and Chmod
+## UNIX permissions and Chmod (10 mins)
 
 An OS is meant to serve many users, A user may correspond to a real-world person, but also a program that acts as a specific user. In my laptop OS, I am "Gerry" and with gerry goes a set of permissions and restrictions on all files and folders, But I can also act for some specific program as the user "www" which corresponds to the privileges necessary to operate the local web server. Every User on the OS has a User ID - the name "Gerry" or "www" is just an alias for a User ID.
 
@@ -317,7 +317,7 @@ This breaks down like this:
 - the second group of three letters corresponds to the owner group permission,
 - the last group of three letters corresponds to others permission,
 
-[CFU] <> (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
+[CFU]: (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
 
 #### `chmod`
 
@@ -367,7 +367,7 @@ So, 755 in UNIX permissions means 'I don't mind if other people read or run this
 
 [Comment] <> (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
 
-## Customize The terminal - Demo
+## Customize The terminal - Demo (15 mins)
 
 #### When using bash_profile
 
@@ -460,6 +460,8 @@ Now every new terminal session will include the commands (executable files) in t
 The orders of the folders in the path matters. For example, in the path above, if there is one executable file called `wdi` in the folder `/a/b/c` and another one with the same name in the folder `/usr/local/bin`, then the one executed when the command `wdi` is invoked and will be the command in the folder `/a/b/c` because of the precedence in the path.
 
 Get comfortable with your `~/.bash_profile`
+
+[Comment]: (export works for anything. We can use it to keep track of other variables we might need like whether something is a dev or production environment.) 
 
 ## Closing Thoughts
 
