@@ -469,3 +469,7 @@ We will use the command line several hours every day, because is makes all files
 
 ## Meta Skills
 Click [here](https://github.com/den-wdi-1/terminal-basics-navigating-the-filesystem/blob/master/meta_skills.md) to go to the meta-skills page. 
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
