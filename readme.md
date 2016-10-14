@@ -294,7 +294,7 @@ Every file on the system has associated with it a set of permissions. Permission
 
 Permissions for a file will specify which of the three actions above can be performed for groups an users in an OS.
 
-For every file, there is 3 types of permissions: permissions for the owner, for the group owner and for everyone else. Remember that there are three possibles actions a user can take on a file - read (r), write (w), execute (x) - so for each of the three permissions we need three actions.
+For every file, there are 3 types of permissions: permissions for the owner, for the owning group and for everyone else. Remember that there are three possibles actions a user can take on a file - read (r), write (w), execute (x) - so for each of the three permissions we need three actions.
 
 
 If you change the present working directory to the root (`cd /`) and then show the folder content with the details by typing `ls -l` on the command prompt, you will get something like this:
@@ -399,13 +399,13 @@ So, 755 in UNIX permissions means 'I don't mind if other people read or run this
 
 #### When using bash_profile
 
-When a terminal session starts, there are some configurations read at the start of the session. The configuration is written in a file that has a specific name. As we run `bash`, the file name for this type of shell is called `.bash_profile` and is located in the user folder, so every user for the same machine can have different configurations. `rc` stands for "Run Control" and is an old Unix convention.
+When a terminal session starts, there are some configurations read at the start of the session. The configuration is written in a file that has a specific name. As we run `bash`, the file name for this type of shell is called `.bash_profile` and is located in the user folder, so every user for the same machine can have different configurations.
 
 If you open the file `.bash_profile` using the command `subl ~/.bash_profile`, you'll see your own config file for bash.
 
 You can add code to this file and it will be parsed and/or executed every time you open a new window/tab.  You can add custom commands, aliases, redefine your path etc.
 
-One of the most important params in this file is the `$PATH` definition, let's see what this is about in the next section.
+One of the most important params in this file is the `$PATH` definition, let's see what this is about.
 
 
 ### $PATH
