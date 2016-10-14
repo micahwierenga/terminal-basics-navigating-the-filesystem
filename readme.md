@@ -4,7 +4,15 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!-- Hook: *Go to hackerkeyboard and start typing in.*  Raise your hand if you have this idea of a computer hacker--typing in super-fast, hunched over their green and black monitor, as images flash super-fast in front of them?
+
+Even if you don't, most of the world does.  Today, we're going to try and earn those chops, but spoiler alert: it's a lot slower, and less glamorous than the movies make it seem.  
+
+Hopefully by the end of this class, I can get you to love, or at least like, the errors that will guide you to becoming that leet haxor that the world already thinks you are. -->
+
 # Terminal Basics + Navigating the Filesystem
+
+![](unix_system.jpg)
 
 ## Why is this important?
 *This workshop is relevant to developers because:*
@@ -16,19 +24,18 @@ Market: DEN
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- Summarize a basic filesystem structure, including absolute and relative paths
-- Use the most common commands to navigate and modify files / directories via the Terminal window (`cd`, `pwd`, `mkdir`, `rm -r`, `mv`, `cp`, `touch`)
-- Describe a basic UNIX permissions system
-- Differentiate between navigating the file system using the CLI vs. the GUI
+- **Summarize** a basic filesystem structure, including absolute and relative paths
+- **Use** the most common commands to navigate and modify files / directories via the Terminal window (`cd`, `pwd`, `mkdir`, `rm -r`, `mv`, `cp`, `touch`)
+- **Describe** a basic UNIX permissions system
+- **Differentiate** between navigating the file system using the CLI vs. the GUI
 
 ## Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
-- Open the terminal
-- Issue one or more commands on the command line
-- Be comfortable navigating between folders on the command line
-- Take a look at some simple keyboard shortcuts to practice: [CLI Shortcuts](https://gist.github.com/alexpchin/01caa027b825d5f98871)
+- **Open** the terminal
+- **Issue** one or more commands on the command line
+- **Be comfortable** navigating between folders on the command line
 
 ---
 ##  Intro
@@ -39,22 +46,32 @@ Market: DEN
 <br>
 <figure>
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/FreeDOS_Beta_9_pre-release5_%28command_line_interface%29_on_Bochs_sshot20040912.png" alt="Terminal">
-
+  <br>
   <figcaption>Image from Wikimedia</figcaption>
 </figure>
 <br>
-Today, the command line still exists, even though you may have never seen it as a casual computer user. In this course, we are going to spend a lot of time in the command line, and we will use it every day to manage our files and tell our computer how to run our programs. It will greatly speed up our development process and help us take ownership of our computer at a deeper level. There is so much that your computer will do for you if you know how to speak its language!
+<!-- Today, the command line still exists, even though you may have never seen it as a casual computer user. 
+
+In this course, we are going to spend a lot of time in the command line, and we will use it every day to manage our files and tell our computer how to run our programs. 
+
+It will greatly speed up our development process and help us take ownership of our computer at a deeper level. 
+
+There is so much that your computer will do for you if you know how to speak its language! -->
 <br>
 
 <details>
   <summary>What is a shell?</summary>
-  <p>A shell is simply a type of command line program, which contains a very simple, text-based user interface enabling us to access all of an operating system's services. It is, very simply, a program that accepts text as input and translates that text into the appropriate functions that you want your computer to run.
-  *Taken from Just for fun: [Type like a hacker](http://hackertyper.com/)*
-</p>
+  <p>A shell is a type of command-line program, which contains a very simple, text-based user interface enabling us to access all of an operating system's services. It is a program that accepts *text as input* and *translates that text* into the *appropriate functions* that you want your computer to run.</p>
+  <p>*Taken from Just for fun: [Type like a hacker](http://hackertyper.com/)*</p>
 </details>
 
 ---
-## Forget Finder, get fast at using your laptop (5 minutes)
+
+<!-- 5 minutes -->
+
+<!-- Half-mast I do -->
+
+## Forget Finder, get fast at using your laptop
 
 ### Opening & Closing Terminal 
 
@@ -80,9 +97,13 @@ Notice that you can actually hit enter as soon as the field autocompletes. Get u
 
 - To quit the command line altogether, you can press **⌘-Q**.
 
+<!-- Open up and do all, half-mast when done, help neighbors if stuck -->
+
 ---
 
 ## Paths (10 mins) 
+
+<!-- Before this, run through all of the commands that do these things with dev input-->
 
 Here's a quick review lab:
 From your home directory, make a 
@@ -96,7 +117,10 @@ You'll have 3 minutes for this excercise.
 
 ### Paths 
 
-Every file or folder in a file system can be read, written, and deleted by referencing its position inside the filesystem. When we talk about the position of a file or a folder in a file system, we refer to its "path". There are a couple of different kinds of paths we can use to refer to a file – **absolute paths** and **relative paths**.
+Every file or folder in a file system can be read, written, and deleted by referencing its position inside the filesystem. When we talk about the position of a file or a folder in a file system, we refer to its "path". There are a couple of different kinds of paths we can use to refer to a file:
+
+- **absolute paths**
+- **relative paths**
 
 *Directory* is an important term that's used interchangeably with *folder*. Though they are not exactly the same thing, when we say "navigate to your project directory" think of this as "navigate to your project folder".  Here's a little more information:
 
@@ -133,6 +157,8 @@ open ./c/file.txt
 
 At any time, we can also use the absolute path, by adding a slash to the beginning of the path. The absolute path is the same for a file or a folder regardless of the current working directory, but relative paths are different, depending on what directory we are in.  Directory structures are laid out like `directory/subdirectory/subsubdirectory`.
 
+<!-- Ask for dev input (what is relative vs absolute) but with real examples on my PC -->
+
 Below are some examples of using relative and absolute path for the same action:
 
 - My present location is `/wdi/lessons` and now I want to change directory to `/wdi`.
@@ -165,7 +191,9 @@ Pressing **Up** scrolls through previously entered commands.
 
 [CFU]: # (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
 
-## Copying and Moving Files (10 mins)
+<!-- 10 mins -->
+
+## Copying and Moving Files
 
 Copying files and folders? No problem - `cp file new-file1` creates a copy of the “file” and calls it “new-file” in your current directory.  If you're looking to copy directories you'll have to pass in a `-r`, which stands for "recursive" - to copy the directory and everything inside of it:
 
@@ -465,10 +493,12 @@ Get comfortable with your `~/.bash_profile`
 
 ## Closing Thoughts
 
-We will use the command line several hours every day, because is makes all files and folders manipulations more easy. A lot of softwares programs that we will use during the course also only have a CLI interface and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI.
+We will use the command line several hours every day, because is makes all files and folders manipulations more easy. A lot of programs that we will use during the course also only have a CLI interface and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI.
 
-## Meta Skills
-Click [here](https://github.com/den-wdi-1/terminal-basics-navigating-the-filesystem/blob/master/meta_skills.md) to go to the meta-skills page. 
+## Resources
+- Click [here](https://github.com/den-wdi-2/terminal-basics-navigating-the-filesystem/blob/master/meta_skills.md) to go to the meta-skills page. 
+- Take a look at some simple keyboard shortcuts to practice: [CLI Shortcuts](https://gist.github.com/alexpchin/01caa027b825d5f98871)
+
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
