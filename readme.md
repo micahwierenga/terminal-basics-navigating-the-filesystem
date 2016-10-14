@@ -4,6 +4,8 @@ Market: DEN
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--1:30 5 minutes -->
+
 <!-- Hook: *Go to hackerkeyboard and start typing in.*  Raise your hand if you have this idea of a computer hacker--typing in super-fast, hunched over their green and black monitor, as images flash super-fast in front of them?
 
 Even if you don't, most of the world does.  Today, we're going to try and earn those chops, but spoiler alert: it's a lot slower, and less glamorous than the movies make it seem.  
@@ -38,6 +40,9 @@ Hopefully by the end of this class, I can get you to love, or at least like, the
 - **Be comfortable** navigating between folders on the command line
 
 ---
+
+<!-- 1:35 5 minutes -->
+
 ##  Intro
 <details>
   <summary>What is a GUI (pronounced gooey)?</summary>
@@ -67,7 +72,7 @@ There is so much that your computer will do for you if you know how to speak its
 
 ---
 
-<!-- 5 minutes -->
+<!-- 1:40 5 minutes -->
 
 <!-- Half-mast I do -->
 
@@ -101,7 +106,9 @@ Notice that you can actually hit enter as soon as the field autocompletes. Get u
 
 ---
 
-## Paths (10 mins) 
+<!-- 1:45 10 minutes -->
+
+## Paths
 
 <!-- Before this, run through all of the commands that do these things with dev input-->
 
@@ -191,7 +198,7 @@ Pressing **Up** scrolls through previously entered commands.
 
 [CFU]: # (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
 
-<!-- 10 mins -->
+<!-- 1:55 - 10 mins -->
 
 ## Copying and Moving Files
 
@@ -273,8 +280,9 @@ A few other helpful commands you can try on your own:
 | `history` | lists entire commands history                                         |
 | `df -h`   | displays free disk space                                              |
 
+<!-- 2:05 - 10 minutes -->
 
-## UNIX permissions and Chmod (10 mins)
+## UNIX permissions and Chmod
 
 An OS is meant to serve many users, A user may correspond to a real-world person, but also a program that acts as a specific user. In my laptop OS, I am "Gerry" and with gerry goes a set of permissions and restrictions on all files and folders, But I can also act for some specific program as the user "www" which corresponds to the privileges necessary to operate the local web server. Every User on the OS has a User ID - the name "Gerry" or "www" is just an alias for a User ID.
 
@@ -395,7 +403,9 @@ So, 755 in UNIX permissions means 'I don't mind if other people read or run this
 
 [Comment]: # (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
 
-## Customize The terminal - Demo (15 mins)
+<!-- 2:15 15 minutes -->
+
+## Customize The terminal - Demo
 
 #### When using bash_profile
 
@@ -412,9 +422,9 @@ One of the most important params in this file is the `$PATH` definition, let's s
 
 You’ll hear about _shell path_ (or $PATH) when working with the command line. The _shell path_ in OS X (or Linux) refers to a list of folders in the file system that contains files or executables that will be used by certain applications and programs.
 
-The $PATH is useful in a way that you will not need to type to absolute path  of a command if the folder where this command is contained is already in the path.
+The $PATH is useful because you will not need to type the absolute path of a command if the folder where this command is contained is already in the path.
 
-When a command is typed in the terminal, as search will be performed by the OS to see if the command exists in the folders referenced by the path.
+When a command is typed in the terminal, a search will be performed by the OS to see if the command exists in the folders referenced by the path.
 
 For example, the path that allows you to run the command `git` in the terminal like this:
 
@@ -429,9 +439,6 @@ $ /usr/local/bin/git
 ```
 
 The $PATH contains several absolute paths, and they are all separated by colons **:**
-
-The _path_ is a bunch of absolute paths of the file system separated by colons **:**
-
 
 You can show your $PATH by typing
 
@@ -456,7 +463,7 @@ The path above is actually a list of 5 different paths:
 
 ### Customizing the path
 
-You can add folders in the $PATH by adding in the bash (or zsh) config file. If you open you terminal config file, you’ll see a line looking like:
+You can add folders in the $PATH by adding in the `.bash_profile` config file. If you open you terminal config file, you’ll see a line looking like:
 
 ```bash
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
@@ -468,7 +475,7 @@ Let’s describe this line:
 
 * `export PATH=""` : This tells the terminal to send the variable named PATH to the terminal sessions so that the variable is always accessible.
 * `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin` This is the list of folders that are defined in the path.
-* `:$PATH` : the PATH variable can be defined is several files and by different programs, so at the end of re-definig the path, adding `:$PATH` means that all the PATH definitions made in other config files will be added to the new definition.
+* `:$PATH` : the PATH variable can be defined in several files and by different programs, so at the end of re-defining the path, adding `:$PATH` means that all the PATH definitions made in other config files will be added to the new definition.
 
 In this path definition, we could add a new path to a folder, for example, if we transform this path:
 
@@ -491,9 +498,22 @@ Get comfortable with your `~/.bash_profile`
 
 [Comment]: # (export works for anything. We can use it to keep track of other variables we might need like whether something is a dev or production environment.) 
 
+<!-- 2:30 10 minutes -->
+
+<!-- This might be a good time to do a Command-Line Lab if there is time.  Something like 
+
+- Make a new folder
+- Change your location to that directory
+- Create two blank files
+- Put "hello" into one file, "goodbye" into the other
+- Create a new directory called "salutations"
+- Put the file with "hello" into the "salutations" folder
+- Delete the file with "goodbye"
+- Copy everything from the "salutations" folder into a new "greetings" folder -->
+
 ## Closing Thoughts
 
-We will use the command line several hours every day, because is makes all files and folders manipulations more easy. A lot of programs that we will use during the course also only have a CLI interface and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI.
+We will use the command line several hours every day, because it makes all file and folder manipulations easier. A lot of programs that we will use during the course also only have CLI interaction and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI, but the reverse is not always true.
 
 ## Resources
 - Click [here](https://github.com/den-wdi-2/terminal-basics-navigating-the-filesystem/blob/master/meta_skills.md) to go to the meta-skills page. 
