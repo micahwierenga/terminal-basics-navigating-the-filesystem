@@ -196,7 +196,7 @@ We're "looking into" the User directory at this point; use **Tab** and the **arr
 
 Pressing **Up** scrolls through previously entered commands.
 
-[CFU]: # (Stop and jot. What the absolute path from to temporary_work? /Users/jpbarela/temporary_work What the relative path to the lessons folder from temporary_work? ../wdi/lessons)
+[CFU]: # (Stop and jot. What is the absolute path to temporary_work? /Users/<username>/Coding/WDI_2/temporary_work... What is the relative path to the lessons folder from WDI_2? lessons)
 
 <!-- 1:55 - 10 mins -->
 
@@ -300,7 +300,7 @@ Every file on the system has associated with it a set of permissions. Permission
 * write it.
 * execute it.
 
-Permissions for a file will specify which of the three actions above can be performed for groups an users in an OS.
+Permissions for a file will specify which of the three actions above can be performed for groups and users in an OS.
 
 For every file, there are 3 types of permissions: permissions for the owner, for the owning group and for everyone else. Remember that there are three possibles actions a user can take on a file - read (r), write (w), execute (x) - so for each of the three permissions we need three actions.
 
@@ -335,7 +335,7 @@ The second column corresponds to the permissions details for each file/folder. F
 ```bash
 drwxrwxr-x+
 ```
-We're not going to talk about the `d` letter at the start or the `+` at the end of each line for the moment. Just pay attention to the nine letters between.
+We're not going to talk about the `d` letter at the start or the `+`/`@` at the end of each line for the moment. Just pay attention to the nine letters between.
 
 The important part in this set of characters is:
 
@@ -353,7 +353,7 @@ This breaks down like this:
 - the second group of three letters corresponds to the owner group permission,
 - the last group of three letters corresponds to others permission,
 
-[CFU]: # (What's the permissions of i_love_javascript.js? 644 or rw-r--r--)
+[CFU]: # (What's the permission level of the dev folder? 555 or r-xr-xr-x)
 
 #### `chmod`
 
@@ -416,7 +416,6 @@ If you open the file `.bash_profile` using the command `subl ~/.bash_profile`, y
 You can add code to this file and it will be parsed and/or executed every time you open a new window/tab.  You can add custom commands, aliases, redefine your path etc.
 
 One of the most important params in this file is the `$PATH` definition, let's see what this is about.
-
 
 ### $PATH
 
