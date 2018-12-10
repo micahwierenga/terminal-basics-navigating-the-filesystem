@@ -412,7 +412,7 @@ When a terminal session starts, there are some configurations read at the start 
 
 If you open the file `.bash_profile` using the command `subl ~/.bash_profile`, you'll see your own config file for bash.
 
-You can add code to this file and it will be parsed and/or executed every time you open a new window/tab.  You can add custom commands, aliases, redefine your path etc.
+You can add code to this file and it will be parsed and/or executed every time you open a new window/tab. You can add custom commands, aliases, redefine your path, etc.
 
 One of the most important params in this file is the `$PATH` definition, let's see what this is about.
 
@@ -467,7 +467,7 @@ You can add folders in the $PATH by adding in the `.bash_profile` config file. I
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
 ```
 
-(the folders may be different in your PATH)
+(The folders may be different in your PATH.)
 
 Let’s describe this line:
 
@@ -490,7 +490,7 @@ export PATH="/a/b/c:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:$PATH"
 Now every new terminal session will include the commands (executable files) in the folder `/a/b/c`
 
 
-The orders of the folders in the path matters. For example, in the path above, if there is one executable file called `wdi` in the folder `/a/b/c` and another one with the same name in the folder `/usr/local/bin`, then the one executed when the command `wdi` is invoked and will be the command in the folder `/a/b/c` because of the precedence in the path.
+The orders of the folders in the path matters. For example, in the path above, if there is one executable file called `booj-coding` in the folder `/a/b/c` and another one with the same name in the folder `/usr/local/bin`, then the one executed when the command `booj-coding` is invoked and will be the command in the folder `/a/b/c` because of the precedence in the path.
 
 Get comfortable with your `~/.bash_profile`
 
@@ -498,7 +498,7 @@ Get comfortable with your `~/.bash_profile`
 
 <!-- 2:30 10 minutes -->
 
-<!-- This might be a good time to do a Command-Line Lab if there is time.  Something like 
+<!-- This might be a good time to do a Command-Line Lab if there is time. Something like 
 
 - Make a new folder
 - Change your location to that directory
@@ -511,7 +511,7 @@ Get comfortable with your `~/.bash_profile`
 
 ## Closing Thoughts
 
-We will use the command line several hours every day, because it makes all file and folder manipulations easier. A lot of programs that we will use during the course also only have CLI interaction and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI, but the reverse is not always true.
+We will use the command line often, because it makes all file and folder manipulations easier. A lot of programs that we will use during the course also only have CLI interaction and can only be used with commands. Always remember that every action you'll do in a GUI can be done in the CLI, but the reverse is not always true.
 
 ## Resources
 - Click [here](https://github.com/den-wdi-2/terminal-basics-navigating-the-filesystem/blob/master/meta_skills.md) to go to the meta-skills page. 
