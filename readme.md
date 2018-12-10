@@ -1,14 +1,12 @@
 <!--
-Market: DEN
+booj
 -->
-
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
 <!--1:30 5 minutes -->
 
-<!-- Hook: *Go to hackerkeyboard and start typing in.*  Raise your hand if you have this idea of a computer hacker--typing in super-fast, hunched over their green and black monitor, as images flash super-fast in front of them?
+<!-- Hook: *Go to https://hackertyper.net/.  Raise your hand if you have this idea of a computer hacker--typing in super-fast, hunched over their green and black monitor, as images flash super-fast in front of them?
 
-Even if you don't, most of the world does.  Today, we're going to try and earn those chops, but spoiler alert: it's a lot slower, and less glamorous than the movies make it seem.  
+Even if you don't, most of the world does. Today, we're going to try and earn those chops, but spoiler alert: it's a lot slower, and less glamorous than the movies make it seem.  
 
 Hopefully by the end of this class, I can get you to love, or at least like, the errors that will guide you to becoming that leet haxor that the world already thinks you are. -->
 
@@ -19,7 +17,7 @@ Hopefully by the end of this class, I can get you to love, or at least like, the
 ## Why is this important?
 *This workshop is relevant to developers because:*
 
-- You will be using your terminal every day as a developer.
+- You will be using your terminal almost every day as a developer.
 - It will help you understand your Operating System better.
 
 ## What are the objectives?
@@ -36,8 +34,7 @@ Hopefully by the end of this class, I can get you to love, or at least like, the
 *Before this workshop, developers should already be able to:*
 
 - **Open** the terminal
-- **Issue** one or more commands on the command line
-- **Be comfortable** navigating between folders on the command line
+- **Basic understanding** of file structure
 
 ---
 
@@ -83,7 +80,7 @@ There is so much that your computer will do for you if you know how to speak its
 First, we need to launch the command prompt. We do this by using spotlight:
 
 - ⌘ (Command) + Space
-- "*Te*rminal"
+- "Terminal"
 - Enter
 
 Notice that you can actually hit enter as soon as the field autocompletes. Get used to taking shortcuts – don't type the whole word out if you don't have to and avoid using your mouse if you can open or use an app with just keyboard shortcuts. It may seem harder now, but when you get used to it, it will save you literally hours of cumulative time.
@@ -108,19 +105,25 @@ Notice that you can actually hit enter as soon as the field autocompletes. Get u
 
 <!-- 1:45 10 minutes -->
 
-## Paths
+## Basic Navigation, and Creating Files and Directories
 
 <!-- Before this, run through all of the commands that do these things with dev input-->
 
-Here's a quick review lab:
+| Command   | Explanation                             |
+|-----------|-----------------------------------------|
+| `mkdir`   | Creates a new directory                 |
+| `touch`   | Creates a new file                      |
+| `cd`      | Changes directory                       |
+| `ls`      | Lists all non-hidden files in directory |
+
 From your home directory, make a 
 * a file named my ``my_birthday_<you birthday in yy_mm_dd format>.txt``, example ``my_birthday_79_05_11.txt``.
 * a directory named ``temporary_work``
 * a file named ``i_love_javascript.js`` in the ``temporary_work`` directory
-* make a directory named ``wdi`` and another directory in ``wdi`` named ``lessons``
-* print out the contents of the ``temporary_work`` folder 
+* make a directory named ``booj-coding`` and another directory in ``booj-coding`` named ``lessons``
+* list out the contents of the ``temporary_work`` folder 
 
-You'll have 3 minutes for this excercise.
+We'll do this exercise together.
 
 ### Paths 
 
@@ -131,7 +134,7 @@ Every file or folder in a file system can be read, written, and deleted by refer
 
 *Directory* is an important term that's used interchangeably with *folder*. Though they are not exactly the same thing, when we say "navigate to your project directory" think of this as "navigate to your project folder".  Here's a little more information:
 
-_Strictly speaking, there is a difference between a directory which is a file system concept, and the graphical user interface metaphor that is used to represent it (a folder)...If one is referring to a container of documents, the term folder is more appropriate. The term directory refers to the way a structured list of document files and folders is stored on the computer. It is comparable to a telephone directory that contains lists of names, numbers and addresses and does not contain the actual documents themselves._
+_Strictly speaking, there is a difference between a directory which is a file system concept, and the graphical user interface metaphor that is used to represent it (a folder).... If one is referring to a container of documents, the term folder is more appropriate. The term directory refers to the way a structured list of document files and folders is stored on the computer. It is comparable to a telephone directory that contains lists of names, numbers and addresses and does not contain the actual documents themselves._
 
 *Taken from [Close-To-Open Cache Consistency in the Linux NFS Client](http://www.citi.umich.edu/projects/nfs-perf/results/cel/dnlc.html)*
 
@@ -150,7 +153,7 @@ Notice, all these paths started from `/` directory which is a root directory for
 Some examples of absolute path:
 
 *What is a relative path?*
-A relative path is a reference to a file or folder **relative** to the current position, or the present working directory(pwd). If we are in the folder `/a/b/` and we want to open the file that has the absolute path `/a/b/c/file.txt`, we can just type:
+A relative path is a reference to a file or folder **relative** to the current position, or the present working directory (pwd). If we are in the folder `/a/b/` and we want to open the file that has the absolute path `/a/b/c/file.txt`, we can just type:
 
 ```bash
 open c/file.txt
@@ -162,21 +165,21 @@ or
 open ./c/file.txt
 ```
 
-At any time, we can also use the absolute path, by adding a slash to the beginning of the path. The absolute path is the same for a file or a folder regardless of the current working directory, but relative paths are different, depending on what directory we are in.  Directory structures are laid out like `directory/subdirectory/subsubdirectory`.
+At any time, we can also use the absolute path, by adding a slash to the beginning of the path. The absolute path is the same for a file or a folder regardless of the current working directory, but relative paths are different, depending on what directory we are in. Directory structures are laid out like `directory/subdirectory/subsubdirectory`.
 
-<!-- Ask for dev input (what is relative vs absolute) but with real examples on my PC -->
+<!-- Ask for dev input (what is relative vs absolute) but with real examples on my computer. A useful metaphor is giving directions to a location by either starting from the same place every time or starting from your current location -->
 
 Below are some examples of using relative and absolute path for the same action:
 
-- My present location is `/wdi/lessons` and now I want to change directory to `/wdi`.
+- My present location is `/booj-coding/lessons` and now I want to change directory to `/booj-coding`.
 
   - Using relative path: `cd ..`
-  - Using absolute path: `cd /wdi`
+  - Using absolute path: `cd /booj-coding`
 
-- My present location is `/wdi/lessons` and I want to change the location to `/wdi/labs`
+- My present location is `/booj-coding/lessons` and I want to change the location to `/booj-coding/labs`
 
   - Using relative path: `cd ../labs`
-  - Using absolute path: `cd /wdi/labs`
+  - Using absolute path: `cd /booj-coding/labs`
 
 By the way, your terminal is located in:
 
@@ -196,25 +199,23 @@ We're "looking into" the User directory at this point; use **Tab** and the **arr
 
 Pressing **Up** scrolls through previously entered commands.
 
-[CFU]: # (Stop and jot. What is the absolute path to temporary_work? /Users/<username>/Coding/WDI_2/temporary_work... What is the relative path to the lessons folder from WDI_2? lessons)
-
 <!-- 1:55 - 10 mins -->
 
 ## Copying and Moving Files
 
-Copying files and folders? No problem - `cp file new-file1` creates a copy of the “file” and calls it “new-file” in your current directory.  If you're looking to copy directories you'll have to pass in a `-r`, which stands for "recursive" - to copy the directory and everything inside of it:
+Copying files and folders? `cp file new-file1` creates a copy of the “file” and calls it “new-file” in your current directory. If you're looking to copy directories you'll have to pass in a `-r`, which stands for "recursive," to copy the directory and everything inside of it:
 
 ```bash
 cp -r my-project my-project-copy
 ```
 
-Create a copy of the entire "my-project” directory and call it “my-project-copy".  You could always chain a file path onto the second argument and create the copy elsewhere:
+Create a copy of the entire "my-project” directory and call it “my-project-copy". You could always chain a file path onto the second argument and create the copy elsewhere:
 
 ```bash
 cp -r my-project my-project-copy/copy-within-a-copy
 ```
 
-How about removing files and folders? Well, we talked about that earlier, but let's practice - `cd` to your root directory and do the following:
+How about removing files and folders? Well, we talked about that earlier, but let's practice: `cd` to your root directory and do the following:
 
 ```bash
 touch junk-file.txt
@@ -223,20 +224,20 @@ touch junk-directory/inner-junk-file.txt
 ls
 ```
 
-Now, you should see a `junk-file.txt` and a `junk-directory` in your root directory.  But let's get rid of them:
+Now, you should see a `junk-file.txt` and a `junk-directory` in your root directory. But let's get rid of them:
 
 ```bash
 rm junk-file.txt
 rm -r junk-directory
 ```
 
-The first command removes the file `junk-file.txt`; the second removes the directory `junk-directory` and everything inside of it - `inner-junk-file.txt` - because we passed the `-r`, which stands for "recursive".  You could also accomplish this with `-rf` - the `f` stands for force but use with caution and make sure you are in the right place. You can imagine how bad the results could be if you did that to your home folder!
+The first command removes the file `junk-file.txt`; the second removes the directory `junk-directory` and everything inside of it (`inner-junk-file.txt`) because we passed the `-r`, which stands for "recursive". You could also accomplish this with `-rf`. The `f` stands for force but use this with caution and make sure you are in the right place. You can imagine how bad the results could be if you did that to your home folder!
 
 ### Modifying multiple files at the same time
 
-Now, if you're making a whole bunch of files/folders, `mkdir` `rm` and `touch` can be used to create and remove more than one file/directory at the same time.
+Now, if you're making a whole bunch of files/folders, `mkdir`, `rm`, and `touch` can be used to create and remove more than one file/directory at the same time.
 
-Try it out.  First, `ls` to see what you have in there and then:
+Try it out. First, `ls` to see what you have in there and then:
 
 - `mkdir directory01 directory02 directory03`
 - `touch file01 file02 file03`
@@ -249,10 +250,10 @@ Thinking about this command with relative and absolute paths:
   - Using relative path: `rm folder/file.txt`
   - Using absolute path: `rm /a/b/folder/file.txt`
 
-- If my present location is `/wdi/labs`, and I want to remove a `a.txt` file located in this directory
+- If my present location is `/booj-coding/labs`, and I want to remove a `a.txt` file located in this directory
 
   - Using relative path: `rm a.txt`
-  - Using absolute path: `rm /wdi/labs/a.txt`
+  - Using absolute path: `rm /booj-coding/labs/a.txt`
 
 Finally, we can rename and move files and folders with this syntax:
 
@@ -260,7 +261,7 @@ Finally, we can rename and move files and folders with this syntax:
 mv file-name file-name2
 ```
 
-The first argument is the file or folder being moved or renamed, and the second argument is the directory destination you can use to also rename the file/folder if you want.  For example, from your root directory:
+The first argument is the file or folder being moved or renamed, and the second argument is the directory destination you can use to also rename the file/folder if you want. For example, from your root directory:
 
 ```bash
 mkdir this-folder that-folder
@@ -284,14 +285,14 @@ A few other helpful commands you can try on your own:
 
 ## UNIX permissions and Chmod
 
-An OS is meant to serve many users, A user may correspond to a real-world person, but also a program that acts as a specific user. In my laptop OS, I am "Gerry" and with gerry goes a set of permissions and restrictions on all files and folders, But I can also act for some specific program as the user "www" which corresponds to the privileges necessary to operate the local web server. Every User on the OS has a User ID - the name "Gerry" or "www" is just an alias for a User ID.
+An OS is meant to serve many users, A user may correspond to a real-world person, but also a program that acts as a specific user. In my laptop OS, let's say I am "Gerry" and with gerry goes a set of permissions and restrictions on all files and folders. But I can also act for some specific program as the user "www" which corresponds to the privileges necessary to operate the local web server. Every User on the OS has a User ID - the name "Gerry" or "www" is just an alias for a User ID.
 
 Users can be organized in groups. A user may be in one or several groups. A group will have the same set of permissions for every user assigned to this group.
 
 Every file has an owner user and an owner group. So, for any file in the system, user 'gerry' may have one of the following ownership relations:
 
 * gerry owns the file, i.e. the file's owner is 'gerry'.
-* gerry is a member of the group that owns the file, i.e. the file's owner group is 'wdi'.
+* gerry is a member of the group that owns the file, i.e. the file's owner group is 'booj-coding'.
 * gerry is neither the owner, nor belonging to the group that owns the file.
 
 Every file on the system has associated with it a set of permissions. Permissions tell UNIX what can be done with that file and by whom. There are three things you can do with a given file:
@@ -302,8 +303,7 @@ Every file on the system has associated with it a set of permissions. Permission
 
 Permissions for a file will specify which of the three actions above can be performed for groups and users in an OS.
 
-For every file, there are 3 types of permissions: permissions for the owner, for the owning group and for everyone else. Remember that there are three possibles actions a user can take on a file - read (r), write (w), execute (x) - so for each of the three permissions we need three actions.
-
+For every file, there are 3 types of permissions: permissions for the owner, for the owning group, and for everyone else. Remember that there are three possible actions a user can take on a file: read (r), write (w), execute (x). So, for each of the three permissions we need three actions.
 
 If you change the present working directory to the root (`cd /`) and then show the folder content with the details by typing `ls -l` on the command prompt, you will get something like this:
 
@@ -349,19 +349,17 @@ rwx rwx r-x
 ```
 This breaks down like this:
 
-- first group of three letters corresponds to the owner permission,
-- the second group of three letters corresponds to the owner group permission,
-- the last group of three letters corresponds to others permission,
-
-[CFU]: # (What's the permission level of the dev folder? 555 or r-xr-xr-x)
+- first group of three letters corresponds to the owner permission
+- the second group of three letters corresponds to the owner group permission
+- the last group of three letters corresponds to others' permission
 
 #### `chmod`
 
-To modify a file's permissions you need to use the `chmod` command.
+To modify a file's permissions, you need to use the `chmod` command.
 
 Only the owner of a file may use chmod to alter a file's permissions.
 
-chmod has the following syntax:
+`chmod` has the following syntax:
 
 ```bash
 chmod [options] mode file(s)
@@ -373,7 +371,7 @@ The 'mode' part specifies the new permissions for the file(s) that follow as arg
 chmod a-x file.txt
 ```
 
-This means that the execute bit should be cleared (-) for all users - owner, group and the rest of the world. The permissions start with a letter specifying what users should be affected by the change, and this might be any of the following:
+This means that the execute bit should be cleared (-) for all users: owner, group and the rest of the world. The permissions start with a letter specifying what users should be affected by the change, and this might be any of the following:
 
 
 * u the owner user
@@ -384,7 +382,6 @@ This means that the execute bit should be cleared (-) for all users - owner, gro
 You might have encountered things like `chmod 755 a_file.txt`.
 
 You can change the entire permission pattern of a file in one go using one number like the one in this example. Every mode has a corresponding code number, and as we shall see, there is a very simple way to figure out what number corresponds to any mode.
-
 
 Every single digit in the triplet corresponds to the level of authorization for a group (user, group and others). Every digit is the addition of the rights for this group, and every level of permission corresponds to a number:
 
@@ -402,6 +399,8 @@ Which makes : 755
 So, 755 in UNIX permissions means 'I don't mind if other people read or run this file, but only I should be able to modify it' while 777 means 'everyone has full access to this file'
 
 [Comment]: # (An example of why we need chmod is that if we write a small script we'll need to make it executable to actually run it.)
+
+Reference: https://kb.iu.edu/d/abdb
 
 <!-- 2:15 15 minutes -->
 
